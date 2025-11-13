@@ -1,0 +1,28 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "1. Introduction The \"StorySpark AI\" application aims to empower parents, educators, aspiring authors, and children to easily create personalized, illustrated children's storybooks. Leveraging advanced AI, the platform will generate unique narratives and corresponding imagery, offering a seamless process from idea to downloadable PDF. This addresses critical needs in the market: the desire for accessible, customizable, and high-quality children's literary content, while specifically overcoming the limitations identified in current AI-powered story generation, such as illustration inconsistency, narrative quality issues, and challenges with print-ready output. StorySpark AI strives to bring the magic of personalized storytelling to life with unparalleled consistency and creative control.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asim1207/story_book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Asim1207/story_book/issues"
+  },
+  "homepage": "https://github.com/Asim1207/story_book#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.3"
+  }
+}
