@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= story.title %></title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .book {
+            width: 8.5in;
+            height: 11in;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .page {
+            page-break-after: always;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 1in;
+        }
+        .cover {
+            text-align: center;
+        }
+        .cover h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .cover h2 {
+            font-size: 24px;
+            color: #555;
+        }
+        .cover img {
+            max-width: 80%;
+            max-height: 50%;
+            margin-top: 40px;
+        }
+        .story-page {
+            text-align: center;
+        }
+        .story-page img {
+            max-width: 100%;
+            max-height: 50%;
+            margin-bottom: 20px;
+        }
+        .story-page p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="book">
+        <!-- Cover Page -->
+        <div class="page cover">
+            <h1><%= story.title %></h1>
+            <h2>By <%= story.authorName %></h2>
+            <% if (story.coverImageUrl) { %>
+                <img src="<%= story.coverImageUrl %>" alt="Cover Image">
+            <% } %>
+        </div>
+
+        <!-- Story Pages -->
+        <% story.pages.forEach(page => { %>
+            <div class="page story-page">
+                <img src="<%= page.imageUrl %>" alt="Story Illustration">
+                <p><%= page.text %></p>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>
